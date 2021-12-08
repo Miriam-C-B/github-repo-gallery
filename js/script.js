@@ -3,6 +3,8 @@ const username = "Miriam-C-B"; // GitHub user name
 const repoList = document.querySelector(".repo-list"); // unordered repo list
 const allReposContainer = document.querySelector(".repos"); //section in which all the repo information appears
 const repoData = document.querySelector(".repo-data"); //section where data from individual repos will appear
+const viewReposButton = document.querySelector(".view-repos"); //selects back to repo gallery button
+const filterInput = document.querySelector(".filter-repos") // selects input with "search by name" placeholder
 
 
 //async function that fetches information from my GitHub profile
@@ -43,8 +45,9 @@ const gitRepos = async function () {
     displayRepos(repoData)
 };
 
-//function to display info about each repo
+//function to display repos
 const displayRepos = function (repos) {
+    filterInput.classList.remove("hide");
     for (const repo of repos) {
         const repoItem = document.createElement("li");
         repoItem.classList.add("repo");
@@ -93,8 +96,35 @@ const displayRepoInfo = function (repoInfo, languages) {
     repoData.append(div);
     repoData.classList.remove("hide");
     allReposContainer.classList.add("hide");
+    backButton.classList.remove("hide");
 };
 
+//event listener for backButton
+viewReposButton.addEventListener("click", function (){
+    allReposContainer.classList.remove("hide");
+    repoData.classList.add("hide");
+    viewReposButton.classList.add("hide");
+});
+
+// Input event for the search box
+filterInput.addEventListener("input", function (e) {
+    const searchText = e.target.value;
+    //console.log(search);
+    const repos = document.querySelectorAll(".repo"); //selects ALL elements with the class .repo
+    const searchLowerText = searchText.toLowerCase();
+
+    //loop through each repo
+    for (const repo of repos) {
+        const repoLowerText = repo.innerText.toLowerCase(); //changes repos innerText to lower case
+        //check if repo text includes the lowercase search text
+        if (repoLowerText.includes(searchLowerText)) {
+            repo.classList.remove("hide"); //shows repos that include the string of letters you're searching for
+        } else {
+            repo.classList.add("hide"); //hides repo that does not include the string of letters you're searching for
+        }
+    }
+
+});
 
 
 
