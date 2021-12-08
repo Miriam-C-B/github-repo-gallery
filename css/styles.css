@@ -226,6 +226,8 @@ section.repo-data {
 }
 
 .view-repos {
+    background-color: #3C991F;
+    color: #fff;
     max-width: 200px;
     margin-top: 0;
 }
