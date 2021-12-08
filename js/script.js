@@ -96,7 +96,7 @@ const displayRepoInfo = function (repoInfo, languages) {
     repoData.append(div);
     repoData.classList.remove("hide");
     allReposContainer.classList.add("hide");
-    backButton.classList.remove("hide");
+    viewReposButton.classList.remove("hide");
 };
 
 //event listener for backButton
