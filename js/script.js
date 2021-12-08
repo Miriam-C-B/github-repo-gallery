@@ -99,7 +99,7 @@ const displayRepoInfo = function (repoInfo, languages) {
     backButton.classList.remove("hide");
 };
 
-//event listener for backButton
+//event listener for viewReposButton
 viewReposButton.addEventListener("click", function (){
     allReposContainer.classList.remove("hide");
     repoData.classList.add("hide");
