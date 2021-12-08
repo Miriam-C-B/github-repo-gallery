@@ -26,7 +26,7 @@ body {
     width: 300px;
 }
 
-.fa-github-alt {
+.fa-github {
     color: #3C991F;
 }
 
@@ -231,6 +231,8 @@ section.repo-data {
     max-width: 200px;
     margin-top: 0;
 }
+
+
 
 @media (min-width: 700px) {
     .user-info div {
