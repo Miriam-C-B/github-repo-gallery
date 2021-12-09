@@ -216,6 +216,7 @@ section.repo-data {
 .repo-data .visit:hover {
     background-color: #020C99;
     border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 .button-container {
@@ -232,6 +233,10 @@ section.repo-data {
     margin-top: 0;
 }
 
+.view-repos:hover {
+    background-color: #95E67C;
+    cursor: pointer;
+}
 
 
 @media (min-width: 700px) {
