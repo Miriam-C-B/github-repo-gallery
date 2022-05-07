@@ -201,7 +201,8 @@ section.repo-data {
     text-align: left;
 }
 
-.repo-data .visit {
+.repo-data .visit,
+.repo-data .visit-pages {
     text-decoration: none;
     max-width: 200px;
     color: #fff;
@@ -213,7 +214,12 @@ section.repo-data {
     border: 1px solid #070081;
 }
 
-.repo-data .visit:hover {
+.repo-data .visit-pages {
+    margin-top: 1em;
+}
+
+.repo-data .visit:hover,
+.repo-data .visit-pages:hover {
     background-color: #070081;
     border: 1px solid #ccc;
     cursor: pointer;
