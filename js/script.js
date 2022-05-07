@@ -83,7 +83,7 @@ const getRepoInfo = async function (repoName) {
     displayRepoInfo(repoInfo, languages);
 };
 
-//function to display specific repo info
+//function to display specific repo info, including two buttons that link to the github repo page and the github pages
 const displayRepoInfo = function (repoInfo, languages) {
     repoData.innerHTML = "";
     const div = document.createElement("div");
